@@ -1,7 +1,11 @@
-import React from 'react'
+import AuthorizationCard from "../components/autorization/AuthorizationCard";
+import AuthorizationHeader from "../components/autorization/AuthorizationHeader";
 
 export default function Authorization() {
   return (
-    <div>Authorization</div>
+    <div>
+      <AuthorizationHeader />
+      <AuthorizationCard />
+    </div>
   )
 }

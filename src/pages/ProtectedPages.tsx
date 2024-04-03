@@ -1,10 +1,8 @@
 import { Navigate, Outlet } from 'react-router-dom'
 
 export default function ProtectedPages() {
-    const token = false
+    const permission = JSON.parse(localStorage.getItem("token") || "{}");
   return (
-    // permission.data?.token
-    token
-     ? <Outlet /> : <Navigate to='/autorization' />
+    permission.data?.token ? <Outlet /> : <Navigate to='/authorization' />
   )
 }
